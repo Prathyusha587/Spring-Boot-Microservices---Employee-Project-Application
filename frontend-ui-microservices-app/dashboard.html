@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Employee Dashboard</h1>
+
+    <div class="table-wrapper">
+      <div class="top-bar">
+        <button onClick="openAddEmployeeModal()" class="add-btn">
+          + Add Employee
+        </button>
+      </div>
+
+      <table id="employeeTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Base Location</th>
+            <th>Project Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="employeeTableBody"></tbody>
+      </table>
+    </div>
+
+    <! --- edit employee modal --- >
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <h2 id="modalTitle">Edit Employee</h2>
+        <input type="hidden" id="editId" />
+
+        <div class="formRow">
+          <label>Name:</label>
+          <input type="text" id="editName" class="formInput" />
+        </div>
+
+        <div class="formRow">
+          <label>Email:</label>
+          <input type="text" id="editEmail" class="formInput" />
+        </div>
+
+        <div class="formRow">
+          <label>Location:</label>
+          <input type="text" id="editLocation" class="formInput" />
+        </div>
+
+        <div class="formRow">
+          <label>Project:</label>
+          <!-- <input type="text" id="editProject" class="formInput" /> -->
+          <select id="editProject" class="formInput"></select>
+        </div>
+
+        <button id="saveEditBtn" class="formButton">Save</button>
+        <button id="closeModalBtn" class="formButton">Cancel</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
